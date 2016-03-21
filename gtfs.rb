@@ -61,7 +61,7 @@ class GovRoGTFSConverter
                 'trip_id' => trip_id,
                 'agency_id' => trip_row.attr('Operator'),
                 'trip_type' => trip_type,
-                'trip_short_name' => "#{trip_type} #{trip_id}",
+                'trip_short_name' => trip_type,
                 'stops_data' => self::trip_stops_data_for_xml_row(trip_row, trip_id),
                 'calendar_data' => self::trip_calendar_data_for_xml_row(trip_row),
             }
