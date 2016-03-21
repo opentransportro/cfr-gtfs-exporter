@@ -159,19 +159,19 @@ class GovRoGTFSConverter
                     time_add_1_DAY = true
                 end
             end
-            stop_data['arrival_time'] = self::seconds_to_hhmm(stop_data['stop_arrival_seconds'], time_add_1_DAY)
+            stop_data['arrival_time'] = self::seconds_to_string(stop_data['stop_arrival_seconds'], time_add_1_DAY)
 
 
             if time_add_1_DAY.nil? && is_not_last_stop && (stop_data['stop_arrival_seconds'] > stop_data['stop_departure_seconds'])
                 time_add_1_DAY = true
             end
-            stop_data['departure_time'] = self::seconds_to_hhmm(stop_data['stop_departure_seconds'], time_add_1_DAY)
+            stop_data['departure_time'] = self::seconds_to_string(stop_data['stop_departure_seconds'], time_add_1_DAY)
         end
 
         return trip_stop_rows
     end
 
-    def self.seconds_to_hhmm(total_seconds, add_one_day)
+    def self.seconds_to_string(total_seconds, add_one_day)
         if total_seconds == -1
             return nil
         end
@@ -184,8 +184,7 @@ class GovRoGTFSConverter
         minutes = (total_seconds / 60) % 60
         hours = total_seconds / (60 * 60)
     
-        hhmm = format("%02d:%02d", hours, minutes)
-        return hhmm
+        return format("%02d:%02d:%02d", hours, minutes, seconds)
     end
 
     def self.gtfs_data_agency
