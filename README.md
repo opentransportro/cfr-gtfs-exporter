@@ -22,6 +22,11 @@ Please link back to this page if you are using this utility or the generated fil
 ## Contact
 If you have additional questions you can use [this form](https://docs.google.com/forms/d/1ZWCqfF8OvRBlMPHMc5FbL6T3zYhQ-p18B8IIwMt1sRs/) to contact me or just ping me on [Twitter](http://twitter.com/vasile23)
 
+**Contributors**
+- Vasile Coțovanu - [@vasile](https://github.com/vasile)
+- [@mbutaru](https://github.com/mbutaru)
+- Alex Butum - [@mnemonicflow](https://github.com/mnemonicflow)
+
 ## License
 
 **Copyright (c) 2016 Vasile Coțovanu** - http://www.vasile.ch
