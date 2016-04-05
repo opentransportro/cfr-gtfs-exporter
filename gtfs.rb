@@ -168,6 +168,10 @@ class GovRoGTFSConverter
             stop_data['departure_time'] = self::seconds_to_string(stop_data['stop_departure_seconds'], time_add_1_DAY)
         end
 
+        # Actually the ElementTrasa nodes contain all the stops in between no matter if the train stops or not there
+        # => we remove all the stops in which the train stops for ... 0 seconds, so not at all
+        trip_stop_rows = trip_stop_rows.select{ |stop_data| stop_data['arrival_time'] != stop_data['departure_time'] }
+
         return trip_stop_rows
     end
 
