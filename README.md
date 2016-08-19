@@ -13,6 +13,12 @@ Please link back to this page if you are using this utility or the generated fil
 * run `$ ruby parse.rb`
 * in few seconds the `gtfs-out` folder is populated with required GTFS files
 
+## Romanian Railways iOS App
+[Romanian Railways](https://itunes.apple.com/us/app/romanian-railways/id1099755336?mt=8) is an iOS app containing all the stations and train departures in Romania, can be used offline without need of a mobile connection.
+
+[![Romanian Railways](https://api.monosnap.com/rpc/file/download?id=63n5Z3gYvOmL94CM6jdJmVMc08LAaM)](https://itunes.apple.com/us/app/romanian-railways/id1099755336?mt=8)
+[Download the app](https://itunes.apple.com/us/app/romanian-railways/id1099755336?mt=8)
+
 ## Romanian Railways Network
 [cfr.webgis.ro](http://cfr.webgis.ro) is an example usage of using the GTFS dataset and it's a visualization of romanian railways network
 
