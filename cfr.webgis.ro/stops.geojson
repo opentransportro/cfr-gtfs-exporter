@@ -10210,14 +10210,14 @@
     {
       "type": "Feature",
       "properties": {
-        "station_id": "57223",
-        "name": "Pav. CFR Braşov Triaj h."
+        "station_id": "30756",
+        "name": "Braşov Triaj"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.647978,
-          45.674788
+          25.64694,
+          45.674246
         ]
       }
     },
@@ -11826,8 +11826,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.940298,
-          47.553195
+          25.941876,
+          47.552594
         ]
       }
     },
@@ -12862,8 +12862,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.653839,
-          45.619353
+          25.653796,
+          45.619076
         ]
       }
     },
@@ -13114,8 +13114,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.37096,
-          44.35621
+          26.371007,
+          44.355807
         ]
       }
     },
@@ -15914,8 +15914,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.576045,
-          45.663142
+          25.574548,
+          45.662858
         ]
       }
     },
@@ -19806,8 +19806,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.930817,
-          47.63939
+          25.930147,
+          47.638684
         ]
       }
     },
@@ -20240,8 +20240,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.938996,
-          47.599381
+          25.938313,
+          47.599242
         ]
       }
     },
@@ -20254,8 +20254,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.958834,
-          47.569586
+          25.95892,
+          47.570259
         ]
       }
     },
@@ -20464,8 +20464,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.364197,
-          46.499884
+          21.363884,
+          46.500115
         ]
       }
     },
@@ -20478,8 +20478,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.302951,
-          46.512755
+          21.302451,
+          46.512511
         ]
       }
     },
@@ -22242,8 +22242,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          22.343208,
-          47.321686
+          22.342824,
+          47.322269
         ]
       }
     },
@@ -22550,8 +22550,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.378219,
-          45.246594
+          26.377693,
+          45.246677
         ]
       }
     },
@@ -25168,8 +25168,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.649157,
-          45.670164
+          25.651389,
+          45.668059
         ]
       }
     },
@@ -25840,8 +25840,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.624376,
-          45.663868
+          25.624471,
+          45.663269
         ]
       }
     },
@@ -26260,8 +26260,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          25.637272,
-          45.666929
+          25.63434,
+          45.66428
         ]
       }
     },
@@ -27254,8 +27254,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          22.328646,
-          47.339825
+          22.328199,
+          47.33983
         ]
       }
     },
@@ -27758,8 +27758,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          26.362378,
-          45.29248
+          26.362265,
+          45.291809
         ]
       }
     },
@@ -28346,8 +28346,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          23.037043,
-          45.839294
+          23.037035,
+          45.839356
         ]
       }
     },
@@ -29510,6 +29510,76 @@
         "coordinates": [
           24.148314,
           45.811154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "44692",
+        "name": "Horea h."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.335987,
+          47.32456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "52467",
+        "name": "Valea Seacă h."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.358479,
+          45.27433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "61949",
+        "name": "Bereşti Tunel h."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.881886,
+          46.107449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "81717",
+        "name": "PO Podu Pitarului h."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.376909,
+          44.346144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "57223",
+        "name": " Pav. CFR Braşov Triaj h."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.63521,
+          45.66727
         ]
       }
     }
