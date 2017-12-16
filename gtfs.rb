@@ -51,11 +51,18 @@ class GovRoGTFSConverter
     def self.trips_data_from_file(file_path)
         trips_data = []
 
+        trip_ids = {}
+        
         file_content = IO.read(file_path)
         doc = Nokogiri::XML(file_content)  
         doc.xpath('/XmlIf/XmlMts/Mt/Trenuri/Tren').each_with_index do |trip_row, k_train|
             trip_id = trip_row.attr('Numar')
             trip_type = trip_row.attr('CategorieTren')
+
+            if trip_ids[trip_id]
+                print "ERROR trip_id #{trip_id} exists already in #{file_path}\n"
+                next
+            end
 
             trip_data = {
                 'trip_id' => trip_id,
@@ -64,6 +71,9 @@ class GovRoGTFSConverter
                 'stops_data' => self::trip_stops_data_for_xml_row(trip_row, trip_id),
                 'calendar_data' => self::trip_calendar_data_for_xml_row(trip_row),
             }
+
+            trip_ids[trip_id] = trip_data
+
 
             trips_data.push(trip_data)
         end
