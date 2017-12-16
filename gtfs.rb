@@ -53,6 +53,14 @@ class GovRoGTFSConverter
 
         trip_ids = {}
         
+        settings = YAML.load_file("#{APP_PATH}/settings.yml")
+        agency_rows = self::gtfs_data_agency()
+        agency_map = {}
+        agency_rows.each do |agency_row|
+            agency_id = agency_row['agency_id'].to_s
+            agency_map[agency_id] = agency_row
+        end
+
         file_content = IO.read(file_path)
         doc = Nokogiri::XML(file_content)  
         doc.xpath('/XmlIf/XmlMts/Mt/Trenuri/Tren').each_with_index do |trip_row, k_train|
@@ -64,9 +72,22 @@ class GovRoGTFSConverter
                 next
             end
 
+            agency_id = trip_row.attr('Operator')
+            if agency_map[agency_id].nil?
+                operator_filename = file_path.split('/').last.match(/^(.+?)[0-9]/)[1]
+                broken_agency_id = settings['broken_agency'][operator_filename]
+
+                if broken_agency_id.nil?
+                    print "BROKEN agency_id #{agency_id} for #{trip_id} in #{file_path}\n"
+                    exit
+                end
+
+                agency_id = broken_agency_id
+            end
+
             trip_data = {
                 'trip_id' => trip_id,
-                'agency_id' => trip_row.attr('Operator'),
+                'agency_id' => agency_id,
                 'trip_short_name' => trip_type,
                 'stops_data' => self::trip_stops_data_for_xml_row(trip_row, trip_id),
                 'calendar_data' => self::trip_calendar_data_for_xml_row(trip_row),
