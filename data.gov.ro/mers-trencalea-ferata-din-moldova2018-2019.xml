@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XmlIf encoding="UTF-8" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="trnIfSchema_v4.xsd">
+    <XmlMts>
+        <Mt DataExport="20181212" MtValabilDeLa="20181209" MtValabilPinaLa="20191214" Versiune="1">
+            <Trenuri>
+                <Tren CategorieTren="IR" KmCum="17900.0" Lungime="350" Numar="1052" Operator="906090" Proprietar="906090" Putere="" Rang="3"
+                    Servicii="2" Tonaj="720">
+                    <Trase>
+                        <Trasa CodStatieFinala="936" CodStatieInitiala="61016" Id="1" Tip="Implicita">
+                            <ElementTrasa Ajustari="0" CodStaDest="61066" CodStaOrigine="61016" DenStaDestinatie="Holboca Hm." DenStaOrigine="Socola"
+                                Km="6900" Lungime="350" OraP="63720" OraS="64380" Rci="IR" Rco="IR" Restrictie="0" Secventa="1" StationareSecunde="0"
+                                TipOprire="N" Tonaj="720" VitezaLivret="80"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="61080" CodStaOrigine="61066" DenStaDestinatie="Cristeşti Jijia"
+                                DenStaOrigine="Holboca Hm." Km="3800" Lungime="350" OraP="64380" OraS="64980" Rci="IR" Rco="IR" Restrictie="120"
+                                Secventa="2" StationareSecunde="0" TipOprire="N" Tonaj="720" VitezaLivret="80"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="61092" CodStaOrigine="61080" DenStaDestinatie="Ungheni Prut Hm."
+                                DenStaOrigine="Cristeşti Jijia" Km="5800" Lungime="350" OraP="65040" OraS="65520" Rci="IR" Rco="IR" Restrictie="0"
+                                Secventa="3" StationareSecunde="60" TipOprire="C" Tonaj="720" VitezaLivret="80"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="936" CodStaOrigine="61092" DenStaDestinatie="Ungheni Prut Fr."
+                                DenStaOrigine="Ungheni Prut Hm." Km="600" Lungime="350" OraP="67920" OraS="68100" Rci="IR" Rco="IR" Restrictie="0"
+                                Secventa="4" StationareSecunde="2400" TipOprire="C" Tonaj="720" VitezaLivret="40"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="936" CodStaOrigine="936" DenStaDestinatie="Ungheni"
+                                DenStaOrigine="Ungheni Prut Fr." Km="800" Lungime="350" OraP="68160" OraS="68340" Rci="IR" Rco="IR" Restrictie="0"
+                                Secventa="5" StationareSecunde="60" TipOprire="C" Tonaj="720" VitezaLivret="40"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="936" CodStaOrigine="936" DenStaDestinatie="Ungheni" DenStaOrigine="Ungheni" Km="0"
+                                Lungime="350" OraP="68340" OraS="68340" Rci="IR" Rco="IR" Restrictie="0" Secventa="6" StationareSecunde="0"
+                                TipOprire="N" Tonaj="720" VitezaLivret="0"/>
+                            <ModificariInParcurs/>
+                        </Trasa>
+                    </Trase>
+                    <Grupe/>
+                    <RestrictiiTren>
+                        <CalendarTren DeLa="18991230" Id="1" PinaLa="20180531" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20171210" Id="2" PinaLa="20180118" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180120" Id="3" PinaLa="20180125" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180127" Id="4" PinaLa="20180201" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180203" Id="5" PinaLa="20180208" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180210" Id="6" PinaLa="20180215" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180217" Id="7" PinaLa="20180222" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180224" Id="8" PinaLa="20180301" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180303" Id="9" PinaLa="20180308" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180310" Id="10" PinaLa="20180315" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180317" Id="11" PinaLa="20180322" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180324" Id="12" PinaLa="20180329" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180331" Id="13" PinaLa="20180405" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180407" Id="14" PinaLa="20180412" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180414" Id="15" PinaLa="20180419" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180421" Id="16" PinaLa="20180426" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180428" Id="17" PinaLa="20180503" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180505" Id="18" PinaLa="20180510" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180512" Id="19" PinaLa="20180517" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180519" Id="20" PinaLa="20180524" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180526" Id="21" PinaLa="20180531" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180602" Id="22" PinaLa="20180607" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180609" Id="23" PinaLa="20180614" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180616" Id="24" PinaLa="20180621" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180623" Id="25" PinaLa="20180628" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180630" Id="26" PinaLa="20180705" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180707" Id="27" PinaLa="20180712" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180714" Id="28" PinaLa="20180719" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180721" Id="29" PinaLa="20180726" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180728" Id="30" PinaLa="20180802" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180804" Id="31" PinaLa="20180809" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180811" Id="32" PinaLa="20180816" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180818" Id="33" PinaLa="20180823" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180825" Id="34" PinaLa="20180830" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180901" Id="35" PinaLa="20180906" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180908" Id="36" PinaLa="20180913" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180915" Id="37" PinaLa="20180920" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180922" Id="38" PinaLa="20180927" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180929" Id="39" PinaLa="20181004" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181006" Id="40" PinaLa="20181011" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181013" Id="41" PinaLa="20181018" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181020" Id="42" PinaLa="20181025" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181027" Id="43" PinaLa="20181101" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181103" Id="44" PinaLa="20181108" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181110" Id="45" PinaLa="20181115" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181117" Id="46" PinaLa="20181122" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181124" Id="47" PinaLa="20181129" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181201" Id="48" PinaLa="20181206" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181208" Id="49" PinaLa="20181208" Tip="Da" Zile="368"/>
+                    </RestrictiiTren>
+                </Tren>
+                <Tren CategorieTren="IR" KmCum="17900.0" Lungime="175" Numar="1051" Operator="906090" Proprietar="906090" Putere="" Rang="3"
+                    Servicii="2" Tonaj="350">
+                    <Trase>
+                        <Trasa CodStatieFinala="61016" CodStatieInitiala="936" Id="1" Tip="Implicita">
+                            <ElementTrasa Ajustari="0" CodStaDest="936" CodStaOrigine="936" DenStaDestinatie="Ungheni Prut Fr."
+                                DenStaOrigine="Ungheni" Km="800" Lungime="175" OraP="31920" OraS="32100" Rci="IR" Rco="IR" Restrictie="0" Secventa="1"
+                                StationareSecunde="0" TipOprire="N" Tonaj="350" VitezaLivret="40"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="61092" CodStaOrigine="936" DenStaDestinatie="Ungheni Prut Hm."
+                                DenStaOrigine="Ungheni Prut Fr." Km="600" Lungime="175" OraP="32220" OraS="32400" Rci="IR" Rco="IR" Restrictie="0"
+                                Secventa="2" StationareSecunde="120" TipOprire="C" Tonaj="350" VitezaLivret="40"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="61080" CodStaOrigine="61092" DenStaDestinatie="Cristeşti Jijia"
+                                DenStaOrigine="Ungheni Prut Hm." Km="5800" Lungime="175" OraP="34800" OraS="35460" Rci="IR" Rco="IR" Restrictie="0"
+                                Secventa="3" StationareSecunde="2400" TipOprire="C" Tonaj="350" VitezaLivret="80"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="61066" CodStaOrigine="61080" DenStaDestinatie="Holboca Hm."
+                                DenStaOrigine="Cristeşti Jijia" Km="3800" Lungime="175" OraP="35520" OraS="36060" Rci="IR" Rco="IR" Restrictie="0"
+                                Secventa="4" StationareSecunde="60" TipOprire="C" Tonaj="350" VitezaLivret="80"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="61016" CodStaOrigine="61066" DenStaDestinatie="Socola" DenStaOrigine="Holboca Hm."
+                                Km="6900" Lungime="175" OraP="36060" OraS="36900" Rci="IR" Rco="IR" Restrictie="120" Secventa="5"
+                                StationareSecunde="0" TipOprire="N" Tonaj="350" VitezaLivret="80"/>
+                            <ElementTrasa Ajustari="0" CodStaDest="61016" CodStaOrigine="61016" DenStaDestinatie="Socola" DenStaOrigine="Socola"
+                                Km="0" Lungime="175" OraP="36900" OraS="36900" Rci="IR" Rco="IR" Restrictie="0" Secventa="6" StationareSecunde="0"
+                                TipOprire="N" Tonaj="350" VitezaLivret="0"/>
+                            <ModificariInParcurs/>
+                        </Trasa>
+                    </Trase>
+                    <Grupe/>
+                    <RestrictiiTren>
+                        <CalendarTren DeLa="18991230" Id="1" PinaLa="20180531" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20171210" Id="2" PinaLa="20180104" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180106" Id="3" PinaLa="20180118" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180120" Id="4" PinaLa="20180125" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180127" Id="5" PinaLa="20180201" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180203" Id="6" PinaLa="20180208" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180210" Id="7" PinaLa="20180215" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180217" Id="8" PinaLa="20180222" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180224" Id="9" PinaLa="20180301" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180303" Id="10" PinaLa="20180308" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180310" Id="11" PinaLa="20180315" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180317" Id="12" PinaLa="20180322" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180324" Id="13" PinaLa="20180329" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180331" Id="14" PinaLa="20180405" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180407" Id="15" PinaLa="20180412" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180414" Id="16" PinaLa="20180419" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180421" Id="17" PinaLa="20180426" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180428" Id="18" PinaLa="20180503" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180505" Id="19" PinaLa="20180510" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180512" Id="20" PinaLa="20180517" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180519" Id="21" PinaLa="20180524" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180526" Id="22" PinaLa="20180531" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180602" Id="23" PinaLa="20180607" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180609" Id="24" PinaLa="20180614" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180616" Id="25" PinaLa="20180621" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180623" Id="26" PinaLa="20180628" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180630" Id="27" PinaLa="20180705" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180707" Id="28" PinaLa="20180712" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180714" Id="29" PinaLa="20180719" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180721" Id="30" PinaLa="20180726" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180728" Id="31" PinaLa="20180802" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180804" Id="32" PinaLa="20180809" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180811" Id="33" PinaLa="20180816" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180818" Id="34" PinaLa="20180823" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180825" Id="35" PinaLa="20180906" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180908" Id="36" PinaLa="20180913" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180915" Id="37" PinaLa="20180920" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180922" Id="38" PinaLa="20180927" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20180929" Id="39" PinaLa="20181004" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181006" Id="40" PinaLa="20181011" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181013" Id="41" PinaLa="20181018" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181020" Id="42" PinaLa="20181025" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181027" Id="43" PinaLa="20181101" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181103" Id="44" PinaLa="20181108" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181110" Id="45" PinaLa="20181115" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181117" Id="46" PinaLa="20181122" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181124" Id="47" PinaLa="20181129" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181201" Id="48" PinaLa="20181206" Tip="Da" Zile="368"/>
+                        <CalendarTren DeLa="20181208" Id="49" PinaLa="20181208" Tip="Da" Zile="368"/>
+                    </RestrictiiTren>
+                </Tren>
+            </Trenuri>
+        </Mt>
+    </XmlMts>
+</XmlIf>
