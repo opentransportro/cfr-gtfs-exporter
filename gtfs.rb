@@ -416,6 +416,8 @@ class GovRoGTFSConverter
                     geojson_stop_feature = geojson_stops_map[stop_id]
                     if geojson_stop_feature
                         stop_coordinates = geojson_stop_feature['geometry']['coordinates']
+                    else
+                        print "ERROR, no coordinates found for #{stop_data['stop_name']}(#{stop_id}) - check them with https://cfr.webgis.ro ?\n"
                     end
 
                     stop_row = {
