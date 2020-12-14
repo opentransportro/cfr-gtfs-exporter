@@ -88,7 +88,7 @@ class GovRoGTFSConverter
                 broken_agency_id = settings['broken_agency'][operator_filename]
 
                 if broken_agency_id.nil?
-                    print "BROKEN agency_id #{agency_id} for #{trip_id} in #{file_path}\n"
+                    print "BROKEN agency_id #{agency_id} for trip #{trip_id} in #{file_path}\n"
                     exit
                 end
 
@@ -169,7 +169,7 @@ class GovRoGTFSConverter
             stop_next_arrival_seconds = station_row.attr('OraS').to_i
 
             if !is_last_stop && (stop_id == stop_next_id)
-                print "Trip_id #{trip_id} ERROR: same id for consecutive stops: #{stop_name}(#{stop_id})\n"
+                print "ERROR / IGNORE: found id for consecutive stops: #{stop_name}(#{stop_id}) =>  -- Trip_id: #{trip_id}\n"
                 next
             end
 
