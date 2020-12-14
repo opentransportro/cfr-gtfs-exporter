@@ -72,7 +72,17 @@ class GovRoGTFSConverter
                 next
             end
 
+            # Some XMLs have empty Operator, i.e. Astra.
             agency_id = trip_row.attr('Operator')
+            if agency_map[agency_id].nil?
+                settings['fuzzy_agency_matching'].each do |filename_keywords, fuzzy_agency_id|
+                    if file_path.include? filename_keywords
+                        agency_id = fuzzy_agency_id
+                        break
+                    end
+                end
+            end
+
             if agency_map[agency_id].nil?
                 operator_filename = file_path.split('/').last.match(/^(.+?)[0-9]/)[1]
                 broken_agency_id = settings['broken_agency'][operator_filename]

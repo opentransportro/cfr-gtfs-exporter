@@ -7,11 +7,11 @@ agency_mapping:
         agency_name: CFR Călători
         agency_url: http://www.cfrcalatori.ro/
         agency_timezone: Europe/Bucharest
-    # -   
-    #     agency_id: 200000
-    #     agency_name: Astra Trans Carpatic
-    #     agency_url: https://www.astratranscarpatic.ro
-    #     agency_timezone: Europe/Bucharest
+    -   
+        agency_id: 200000
+        agency_name: Astra Trans Carpatic
+        agency_url: https://www.astratranscarpatic.ro
+        agency_timezone: Europe/Bucharest
     -   
         agency_id: 906090
         agency_name: Calea Ferată din Moldova
@@ -37,6 +37,9 @@ agency_mapping:
         agency_name: Transferoviar Calatori
         agency_url: http://www.transferoviarcalatori.ro/
         agency_timezone: Europe/Bucharest
+
+fuzzy_agency_matching:
+    astra-trans-carpatic: "200000" # Astra doesnt have "Operator" set
 
 gtfs_files:
     agency:
