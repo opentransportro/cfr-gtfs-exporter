@@ -105,7 +105,6 @@ class GovRoGTFSConverter
 
             trip_ids[trip_id] = trip_data
 
-
             trips_data.push(trip_data)
         end
 
@@ -245,6 +244,7 @@ class GovRoGTFSConverter
 
         trips_data.each do |trip_data|
             calendar_key = Digest::SHA1.hexdigest(trip_data['calendar_data'].join)
+            
             calendar_row = calendar_map[calendar_key]
             if calendar_row.nil?
                 week_pattern = trip_data['calendar_data'].first['week_pattern']
