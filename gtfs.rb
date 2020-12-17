@@ -72,13 +72,23 @@ class GovRoGTFSConverter
                 next
             end
 
+            # Some XMLs have empty Operator, i.e. Astra.
             agency_id = trip_row.attr('Operator')
+            if agency_map[agency_id].nil?
+                settings['fuzzy_agency_matching'].each do |filename_keywords, fuzzy_agency_id|
+                    if file_path.include? filename_keywords
+                        agency_id = fuzzy_agency_id
+                        break
+                    end
+                end
+            end
+
             if agency_map[agency_id].nil?
                 operator_filename = file_path.split('/').last.match(/^(.+?)[0-9]/)[1]
                 broken_agency_id = settings['broken_agency'][operator_filename]
 
                 if broken_agency_id.nil?
-                    print "BROKEN agency_id #{agency_id} for #{trip_id} in #{file_path}\n"
+                    print "BROKEN agency_id #{agency_id} for trip #{trip_id} in #{file_path}\n"
                     exit
                 end
 
@@ -94,7 +104,6 @@ class GovRoGTFSConverter
             }
 
             trip_ids[trip_id] = trip_data
-
 
             trips_data.push(trip_data)
         end
@@ -160,7 +169,7 @@ class GovRoGTFSConverter
             stop_next_arrival_seconds = station_row.attr('OraS').to_i
 
             if !is_last_stop && (stop_id == stop_next_id)
-                print "Trip_id #{trip_id} ERROR: same id for consecutive stops: #{stop_name}(#{stop_id})\n"
+                print "ERROR / IGNORE: found id for consecutive stops: #{stop_name}(#{stop_id}) =>  -- Trip_id: #{trip_id}\n"
                 next
             end
 
@@ -235,6 +244,7 @@ class GovRoGTFSConverter
 
         trips_data.each do |trip_data|
             calendar_key = Digest::SHA1.hexdigest(trip_data['calendar_data'].join)
+            
             calendar_row = calendar_map[calendar_key]
             if calendar_row.nil?
                 week_pattern = trip_data['calendar_data'].first['week_pattern']
@@ -406,6 +416,8 @@ class GovRoGTFSConverter
                     geojson_stop_feature = geojson_stops_map[stop_id]
                     if geojson_stop_feature
                         stop_coordinates = geojson_stop_feature['geometry']['coordinates']
+                    else
+                        print "ERROR, no coordinates found for #{stop_data['stop_name']}(#{stop_id}) - check them with https://cfr.webgis.ro ?\n"
                     end
 
                     stop_row = {

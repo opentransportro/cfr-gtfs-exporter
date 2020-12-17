@@ -16838,8 +16838,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          23.528086,
-          46.787382
+          23.527602,
+          46.787068
         ]
       }
     },
@@ -23818,14 +23818,14 @@
     {
       "type": "Feature",
       "properties": {
-        "station_id": "14485",
-        "name": ""
+        "station_id": "15067",
+        "name": "Horticola h."
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          23.277563,
-          44.034119
+          23.272671,
+          44.034136
         ]
       }
     },
@@ -25610,8 +25610,8 @@
     {
       "type": "Feature",
       "properties": {
-        "station_id": "15147",
-        "name": ""
+        "station_id": "13655",
+        "name": "Zigoneni h."
       },
       "geometry": {
         "type": "Point",
@@ -29692,6 +29692,34 @@
         "coordinates": [
           26.009604,
           44.520658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "21640",
+        "name": "Bârzava Nouă Hm."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.973115,
+          46.103623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_id": "32065",
+        "name": "Baciu h."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.515832,
+          46.795223
         ]
       }
     }

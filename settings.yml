@@ -38,6 +38,9 @@ agency_mapping:
         agency_url: http://www.transferoviarcalatori.ro/
         agency_timezone: Europe/Bucharest
 
+fuzzy_agency_matching:
+    astra-trans-carpatic: "200000" # Astra doesnt have "Operator" set
+
 gtfs_files:
     agency:
         - agency_id
