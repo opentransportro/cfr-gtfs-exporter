@@ -444,10 +444,17 @@ class GovRoGTFSConverter
         stop_times_rows = []
         
         trips_data.each do |trip_data|
+            previous_stop_data = nil
             trip_data['stops_data'].each_with_index do |stop_data, k|
                 stop_data['stop_sequence'] = k + 1
                 stop_data['trip_id'] = trip_data['trip_id']
 
+                # add stop headsign to the game
+                if !previous_stop_data.nil?
+                    previous_stop_data['stop_headsign'] = stop_data['stop_name']
+                end
+
+                previous_stop_data = stop_data
                 stop_times_rows.push(stop_data)
             end
         end
