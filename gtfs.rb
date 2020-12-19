@@ -160,6 +160,10 @@ class GovRoGTFSConverter
 
             stop_id = station_row.attr('CodStaOrigine')
             stop_name = station_row.attr('DenStaOrigine')
+
+            stop_name = stop_name.gsub(/[!@%&"]|( [hHMF]+[a-z]*\.)/,'')
+            stop_name.strip!
+            
             stop_departure_seconds = station_row.attr('OraP').to_i
             if is_last_stop
                 stop_departure_seconds = -1
@@ -422,11 +426,10 @@ class GovRoGTFSConverter
                     else
                         print "ERROR, no coordinates found for #{stop_data['stop_name']}(#{stop_id}) - check them with https://cfr.webgis.ro ?\n"
                     end
-                    stop_name = stop_data['stop_name'].gsub(/[!@%&"]|( [hHMF]+[a-z]*\.)/,'')
-                    stop_name.strip!
+                    
                     stop_row = {
                         'stop_id' => stop_id,
-                        'stop_name' => stop_name,
+                        'stop_name' => stop_data['stop_name'],
                         'stop_lat' => stop_coordinates[1],
                         'stop_lon' => stop_coordinates[0],
                     }

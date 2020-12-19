@@ -85,8 +85,8 @@ gtfs_files:
         - arrival_time
         - departure_time
         - stop_id
-        - stop_sequence
         - stop_headsign
+        - stop_sequence
     
     trips:
         - route_id
