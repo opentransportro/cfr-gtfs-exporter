@@ -28,11 +28,10 @@ jobs:
         zip -rj gtfs-cfr.zip gtfs-processed
     - name: Create Release
       id: create_release
-      uses: softprops/action-gh-release@v0.1.5
+      uses: softprops/action-gh-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
-        tag_name: ${{ steps.date.outputs.date }}
         name: Release ${{ steps.date.outputs.date }}
         body: Updating to the lastet version of data provided by cfr
         draft: false
