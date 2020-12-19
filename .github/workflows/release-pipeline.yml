@@ -2,7 +2,13 @@ name: Release Generator
 
 on:
   workflow_dispatch:   
-
+    inputs:
+          version:
+            description: 'Release version (e.g. v0.1.0)'
+            required: true
+          message:
+            description: 'Tag message'
+            required: true
 jobs:
   release:
 
@@ -26,6 +32,12 @@ jobs:
         bzip2 -d romania-latest.osm.bz2 
         docker run --rm -v ${PWD}:/workdir opentransport/pfaedle pfaedle -D -d /workdir/gtfs-out -o /workdir/gtfs-processed --write-trgraph --write-graph --write-cgraph -mall -x /workdir/romania-latest.osm /workdir/gtfs-out
         zip -rj gtfs-cfr.zip gtfs-processed
+    - name: Create Tag
+      uses: negz/create-tag@v1
+      with:
+        version: ${{ github.event.inputs.version }}
+        message: ${{ github.event.inputs.message }}
+        token: ${{ secrets.GH_TOKEN }}
     - name: Create Release
       id: create_release
       uses: softprops/action-gh-release@v1
@@ -34,6 +46,7 @@ jobs:
       with:
         name: Release ${{ steps.date.outputs.date }}
         body: Updating to the lastet version of data provided by cfr
+        tag_name: ${{ github.event.inputs.version }}
         draft: false
         prerelease: false
         files: |
