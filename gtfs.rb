@@ -422,10 +422,11 @@ class GovRoGTFSConverter
                     else
                         print "ERROR, no coordinates found for #{stop_data['stop_name']}(#{stop_id}) - check them with https://cfr.webgis.ro ?\n"
                     end
-
+                    stop_name = stop_data['stop_name'].gsub(/[!@%&"]|( [hHMF]+[a-z]*\.)/,'')
+                    stop_name.strip!
                     stop_row = {
                         'stop_id' => stop_id,
-                        'stop_name' => stop_data['stop_name'],
+                        'stop_name' => stop_name,
                         'stop_lat' => stop_coordinates[1],
                         'stop_lon' => stop_coordinates[0],
                     }
