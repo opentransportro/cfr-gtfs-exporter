@@ -67,6 +67,9 @@ class GovRoGTFSConverter
             trip_id = trip_row.attr('Numar')
             trip_type = trip_row.attr('CategorieTren')
 
+            # override trip id
+            trip_id = "#{trip_type}#{trip_id}"
+
             if trip_ids[trip_id]
                 print "ERROR trip_id #{trip_id} exists already in #{file_path}\n"
                 next
@@ -270,7 +273,7 @@ class GovRoGTFSConverter
                 calendar_map[calendar_key] = calendar_row
                 calendar_service_id += 1
             end
-
+            trip_data['trip_id'] = "#{trip_data['trip_id']}.#{calendar_row['service_id']}"
             trip_data['service_id'] = calendar_row['service_id']
         end
         
