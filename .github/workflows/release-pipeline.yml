@@ -4,11 +4,14 @@ on:
   workflow_dispatch:   
 
 jobs:
-  test:
+  release:
 
     runs-on: ubuntu-latest
 
     steps:
+    - name: Get current date
+      id: date
+      run: echo "name=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
     - uses: actions/checkout@v2
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -22,24 +25,19 @@ jobs:
         wget http://download.geofabrik.de/europe/romania-latest.osm.bz2
         bzip2 -d romania-latest.osm.bz2 
         docker run --rm -v ${PWD}:/workdir opentransport/pfaedle pfaedle -D -d /workdir/gtfs-out -o /workdir/gtfs-processed --write-trgraph --write-graph --write-cgraph -mall -x /workdir/romania-latest.osm /workdir/gtfs-out
+        zip -rj gtfs-cfr.zip gtfs-processed
+    - name: Create Release
+      id: create_release
+      uses: softprops/action-gh-release@v0.1.5
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      with:
+        tag_name: ${{ steps.date.outputs.date }}
+        name: Release ${{ steps.date.outputs.date }}
+        body: Updating to the lastet version of data provided by cfr
+        draft: false
+        prerelease: false
+        files: |
+            gtfs-cfr.zip
+            gtfs-out/trgraph-rail.json
 
-    # - name: Create Release
-    #   id: create_release
-    #   uses: actions/create-release@v1
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    #   with:
-    #     tag_name: ${{ github.ref }}
-    #     release_name: Release ${{ github.ref }}
-    #     draft: false
-    #     prerelease: false
-    # - name: Upload Release Asset
-    #   id: upload-release-asset 
-    #   uses: actions/upload-release-asset@v1
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    #   with:
-    #     upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-    #     asset_path: ./my-artifact.zip
-    #     asset_name: my-artifact.zip
-    #     asset_content_type: application/zip
