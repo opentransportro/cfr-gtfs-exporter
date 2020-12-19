@@ -379,8 +379,8 @@ class GovRoGTFSConverter
                 route_data = {
                     'route_id' => route_id,
                     'agency_id' => trip_data['agency_id'],
-                    'route_short_name' => "#{trip_data['trip_short_name']}: #{first_stop['stop_name']} - #{last_stop['stop_name']}",
-                    'route_long_name' => "#{trip_data['trip_short_name']}: #{stop_names.join(' - ')}",
+                    'route_short_name' => "#{trip_data['trip_short_name']}#{trip_data['trip_id']}",
+                    'route_long_name' => "#{first_stop['stop_name']} - #{last_stop['stop_name']}",
                     'route_color' => 'FF5B33',
                     'route_text_color' => '000000',
                     # https://developers.google.com/transit/gtfs/reference#routestxt
