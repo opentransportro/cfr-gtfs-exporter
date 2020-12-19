@@ -71,6 +71,8 @@ gtfs_files:
         - route_short_name
         - route_long_name
         - route_type
+        - route_color
+        - route_text_color
     
     stops:
         - stop_id
