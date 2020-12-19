@@ -92,4 +92,5 @@ gtfs_files:
         - service_id
         - trip_id
         - trip_short_name
+        - trip_headsign
     

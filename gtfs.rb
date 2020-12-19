@@ -373,10 +373,9 @@ class GovRoGTFSConverter
             end
 
             route_key = stop_ids.join('_')
+            first_stop = trip_data['stops_data'].first
+            last_stop = trip_data['stops_data'].last
             if routes_map[route_key].nil?
-                first_stop = trip_data['stops_data'].first
-                last_stop = trip_data['stops_data'].last
-
                 route_data = {
                     'route_id' => route_id,
                     'agency_id' => trip_data['agency_id'],
@@ -393,6 +392,8 @@ class GovRoGTFSConverter
             end
 
             trip_data['route_id'] = routes_map[route_key]['route_id']
+            trip_data['trip_short_name'] = "#{first_stop['stop_name']} - #{last_stop['stop_name']}"
+            trip_data['trip_headsign'] = last_stop['stop_name']
         end
         
         return routes_map.values
