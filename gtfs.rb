@@ -65,7 +65,7 @@ class GovRoGTFSConverter
         doc = Nokogiri::XML(file_content)  
         doc.xpath('/XmlIf/XmlMts/Mt/Trenuri/Tren').each_with_index do |trip_row, k_train|
             trip_id = trip_row.attr('Numar').sub /-./, ''
-            trip_type = trip_row.attr('CategorieTren').chomp "-N"
+            trip_type = trip_row.attr('CategorieTren').sub "-",''
 
             if trip_ids[trip_id]
                 print "ERROR trip_id #{trip_id} exists already in #{file_path}\n"
