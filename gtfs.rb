@@ -64,11 +64,8 @@ class GovRoGTFSConverter
         file_content = IO.read(file_path)
         doc = Nokogiri::XML(file_content)  
         doc.xpath('/XmlIf/XmlMts/Mt/Trenuri/Tren').each_with_index do |trip_row, k_train|
-            trip_id = trip_row.attr('Numar')
-            trip_type = trip_row.attr('CategorieTren')
-
-            # override trip id
-            trip_id = "#{trip_type}#{trip_id}"
+            trip_id = trip_row.attr('Numar').sub /-./, ''
+            trip_type = trip_row.attr('CategorieTren').chomp "-N"
 
             if trip_ids[trip_id]
                 print "ERROR trip_id #{trip_id} exists already in #{file_path}\n"
@@ -102,6 +99,7 @@ class GovRoGTFSConverter
                 'trip_id' => trip_id,
                 'agency_id' => agency_id,
                 'trip_short_name' => trip_type,
+                'route_short_name' => "#{trip_type}#{trip_id}",
                 'stops_data' => self::trip_stops_data_for_xml_row(trip_row, trip_id),
                 'calendar_data' => self::trip_calendar_data_for_xml_row(trip_row),
             }
@@ -386,7 +384,7 @@ class GovRoGTFSConverter
                 route_data = {
                     'route_id' => route_id,
                     'agency_id' => trip_data['agency_id'],
-                    'route_short_name' => "#{trip_data['trip_id']}",
+                    'route_short_name' => "#{trip_data['route_short_name']}",
                     'route_long_name' => "#{first_stop['stop_name']} - #{last_stop['stop_name']}",
                     'route_color' => 'FF5B33',
                     'route_text_color' => '000000',
